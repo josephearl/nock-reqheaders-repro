@@ -21,7 +21,6 @@ describe("reqheaders", () => {
         }).reply(200);
 
         // HEADER2 has incorrect value, so we expect no match
-        // but the headers are ignored so no error is thrown
         await expect(async () => await makeRequestWithHeaders()).rejects.toThrow(Error);
     });
 
