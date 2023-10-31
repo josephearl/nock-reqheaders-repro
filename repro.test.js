@@ -32,6 +32,7 @@ describe("reqheaders", () => {
 
         // HEADER2 has incorrect value, so we expect no match
         // but the headers are ignored so no error is thrown
+        // and the test fails with `Received promise resolved instead of rejected`
         await expect(async () => await makeRequestWithHeaders()).rejects.toThrow(Error);
     });
 });
